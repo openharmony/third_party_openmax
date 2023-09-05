@@ -1,7 +1,7 @@
 {
     "name": "@ohos/openmax",
     "description": "OpenMAX is a royalty-free, cross-platform API that provides comprehensive streaming media codec and application portability by enabling accelerated multimedia components to be developed, integrated and programmed across multiple operating systems and silicon platforms.",
-    "version": "1.1.2",
+    "version": "3.1",
     "license": "MIT license",
     "publishAs": "code-segment",
     "segment": {
