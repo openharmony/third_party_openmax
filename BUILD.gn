@@ -15,8 +15,8 @@
 
 import("//build/ohos.gni")
 config("openmax_config") {
-  include_dirs = [ "api/1.1.2" ]
+    include_dirs = [ "api/1.1.2" ]
 }
 shared_library("libopenmax_shared") {
-  public_configs = [ ":openmax_config" ]
+    public_configs = [ ":openmax_config" ]
 }
