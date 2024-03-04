@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2020 Huawei Device Co., Ltd.
+# Copyright (c) 2024 Huawei Device Co., Ltd.
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -14,9 +14,14 @@
 #
 
 import("//build/ohos.gni")
+
 config("openmax_config") {
   include_dirs = [ "api/1.1.2" ]
 }
-static_library("libopenmax_shared") {
+
+ohos_static_library("libopenmax_shared") {
   public_configs = [ ":openmax_config" ]
+
+  part_name = "openmax"
+  subsystem_name = "thirdparty"
 }
