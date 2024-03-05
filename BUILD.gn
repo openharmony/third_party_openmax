@@ -19,9 +19,9 @@ config("openmax_config") {
   include_dirs = [ "api/1.1.2" ]
 }
 
-ohos_static_library("libopenmax_shared") {
+ohos_shared_library("libopenmax_shared") {
   public_configs = [ ":openmax_config" ]
-
+  sources = [ "OMX_Base.cpp" ]
   part_name = "openmax"
   subsystem_name = "thirdparty"
 }
