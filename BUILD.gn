@@ -21,7 +21,9 @@ config("openmax_config") {
 
 ohos_shared_library("libopenmax_shared") {
   public_configs = [ ":openmax_config" ]
+
   sources = [ "OMX_Base.cpp" ]
+
   part_name = "openmax"
   subsystem_name = "thirdparty"
 }
