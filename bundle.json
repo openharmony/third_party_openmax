@@ -28,32 +28,8 @@
             "third_party": []
         },
         "build": {
-            "sub_component": [ "//third_party/openmax:libopenmax_shared" ],
-            "inner_kits": [
-                {
-                    "name": "//third_party/openmax:libopenmax_shared",
-                    "header": {
-                        "header_base": "//third_party/openmax/api/1.1.2",
-                        "header_files": [
-                            "OMX_Audio.h",
-                            "OMX_Component.h",
-                            "OMX_ComponentExt.h",
-                            "OMX_ContentPipe.h",
-                            "OMX_Core.h",
-                            "OMX_CoreExt.h",
-                            "OMX_Image.h",
-                            "OMX_ImageExt.h",
-                            "OMX_Index.h",
-                            "OMX_IndexExt.h",
-                            "OMX_IVCommon.h",
-                            "OMX_Other.h",
-                            "OMX_Types.h",
-                            "OMX_Video.h",
-                            "OMX_VideoExt.h"
-                        ]
-                    }
-                }
-            ],
+            "sub_component": [],
+            "inner_kits": [],
             "test": []
         }
     }
