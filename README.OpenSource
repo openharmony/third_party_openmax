@@ -2,7 +2,7 @@
     {
         "Name": "Khronos Group - OpenMAX IL",
         "License": "MIT license",
-        "License File": "LICENSE",
+        "License File": "",
         "Version Number": "1.1.2",
         "Owner": "liufeihu@huawei.com",
         "Upstream URL": "https://github.com/KhronosGroup/OpenMAX-IL-Registry/tree/main/api/1.1.2",
