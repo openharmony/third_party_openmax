@@ -28,10 +28,10 @@
             "third_party": []
         },
         "build": {
-            "sub_component": [ "//third_party/openmax:libopenmax_shared" ],
+            "sub_component": [ "//third_party/openmax:libopenmax_static" ],
             "inner_kits": [
                 {
-                    "name": "//third_party/openmax:libopenmax_shared",
+                    "name": "//third_party/openmax:libopenmax_static",
                     "header": {
                         "header_base": "//third_party/openmax/api/1.1.2",
                         "header_files": [
