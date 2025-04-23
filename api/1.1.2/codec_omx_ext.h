@@ -232,7 +232,17 @@ struct ControlRateConstantQuality {
     uint32_t portIndex;                                    /** Port index */
     uint32_t qualityValue;                                 /** Control rate constant quality */
 };
- 
+
+/**
+ * @brief Defines the <b>ControlRateConstantQuality</b>.
+ */
+struct ControlQualitytargetQp {
+    uint32_t size;                                         /** Size of the structure */
+    union OMX_VERSIONTYPE version;                         /** Component version */
+    uint32_t portIndex;                                    /** Port index */
+    uint32_t targetQp;                                     /** Control rate constant quality */
+};
+
 /**
  * @brief Defines the <b>StableControlRate</b>.
  */
@@ -357,6 +367,12 @@ enum OmxIndexCodecExType {
     OMX_IndexParamSwitchGround,
     /** ControlRateSQR */
     OMX_IndexParamControlRateSQR,
+    /** OMX_CONFIG_BOOLEANTYPE */
+    OMX_IndexParamEnableQPMap,
+    /** CodecBlockQpParam */
+    OMX_IndexParamBlockQP,
+    /** ControlRateCRF */
+    OMX_IndexParamControlRateCRF,
 };
  
 /**
@@ -369,6 +385,8 @@ typedef enum OmxVideoControlRateVendorExtType {
     OMX_Video_ControlRateConstantWithCQ,
     /** stable bit rate mode with SQR */
     OMX_Video_ControlRateConstantWithSQR,
+    /** constant bit rate mode with CRF */
+    OMX_Video_ControlRateConstantWithCRF,
 } OmxVideoControlRateVendorExtType;
  
 /**
@@ -490,7 +508,18 @@ struct CodecEncOutMadParam {
     int32_t frameMadp;
     int32_t sumMadi;
 };
- 
+
+struct CodecBlockQpParam {
+    uint32_t size;                               /** Size of the structure */
+    union OMX_VERSIONTYPE version;               /** Component version */
+    void *blockQpAddr;                           /** qpmap data address */
+    uint32_t blockQpSize;                        /** qpmap data size */
+    bool blockQpSetByUser;                       /** qpmap set by user */
+    bool absQp;                                  /** qpmap use abs qp */
+    uint8_t reserve[2];                          /** struct reserve */
+    uint8_t qpMapData[0];                        /** qpmap data */
+};
+
 #ifdef __cplusplus
 #if __cplusplus
 }
