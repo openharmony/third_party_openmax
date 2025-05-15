@@ -25,6 +25,7 @@ extern "C" {
 #endif /* __cplusplus */
  
 #define PROCESS_NAME_LEN 50
+#define ROI_QUANTITY 6
  
 /**
  * @brief Enumerates the extended AVC profile.
@@ -329,6 +330,8 @@ enum OmxIndexCodecExType {
     OMX_IndexParamLTR,
     /** CodecQPRangeParam */
     OMX_IndexParamQPRange,
+    /** CodecRoiParam */
+    OMX_IndexParamRoi,
     /** OMX_CONFIG_BOOLEANTYPE */
     OMX_IndexParamLowLatency,
     /** WirelessLowDelay */
@@ -492,6 +495,21 @@ struct CodecTemperalLayerParam {
     uint32_t layerCnt;
 };
  
+struct RoiSize {
+    bool regionEnable;
+    bool absQp;
+    int32_t roiQp;
+    uint32_t roiStartX;
+    uint32_t roiStartY;
+    int32_t roiWidth;
+    int32_t roiHeight;
+};
+struct CodecRoiParam {
+    union OMX_VERSIONTYPE version;
+    uint32_t size;
+    struct RoiSize roiInfo[ROI_QUANTITY];
+};
+
 struct CodecParamOverlayBuffer {
     uint32_t size;                               /** Size of the structure */
     union OMX_VERSIONTYPE version;               /** Component version */
