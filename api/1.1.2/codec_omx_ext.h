@@ -376,6 +376,8 @@ enum OmxIndexCodecExType {
     OMX_IndexParamBlockQP,
     /** ControlRateCRF */
     OMX_IndexParamControlRateCRF,
+    /** CodecEncGopMode */
+    OMX_IndexParamEncBFrameMode,
 };
  
 /**
@@ -536,6 +538,18 @@ struct CodecBlockQpParam {
     bool absQp;                                  /** qpmap use abs qp */
     uint8_t reserve[2];                          /** struct reserve */
     uint8_t qpMapData[0];                        /** qpmap data */
+};
+
+typedef enum OMX_VIDEO_GOP_MODE: uint32_t {
+    OMX_ENCODE_GOP_DEFAULT_P_MODE = 0,
+    OMX_ENCODE_GOP_ADAPTIVE_B_MODE,
+    OMX_ENCODE_GOP_H3B_MODE,
+} OMX_VIDEO_GOP_MODE;
+
+struct CodecEncGopMode {
+    uint32_t size;                        /** Size of the structure */
+    union OMX_VERSIONTYPE version;        /** Component version */
+    OMX_VIDEO_GOP_MODE gopMode;           /** encode gop mode */
 };
 
 #ifdef __cplusplus
