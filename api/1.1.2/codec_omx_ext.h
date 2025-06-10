@@ -367,6 +367,8 @@ enum OmxIndexCodecExType {
     /** OMX_CONFIG_BOOLEANTYPE */
     OMX_IndexParamEnablePackInput,
     /** OMX_CONFIG_BOOLEANTYPE */
+    OMX_IndexParamSwitchGround,
+    /** OMX_CONFIG_BOOLEANTYPE */
     OMX_IndexParamBufferRecycle,
     /** OMX_CONFIG_BOOLEANTYPE */
     OMX_IndexParamFreqUpdate,
