@@ -211,6 +211,30 @@ struct GetBufferHandleUsageParams {
     uint64_t usage;                /** Usage */
 };
  
+struct  GetChannelIdParam {
+    uint32_t size;                   /** Size of the structure */
+    union OMX_VERSIONTYPE version;   /** Component version */
+    uint32_t channelId;              /**< channel id */
+};
+ 
+struct  GetLppModeParam {
+    uint32_t size;                   /** Size of the structure */
+    union OMX_VERSIONTYPE version;   /** Component version */
+    bool enable;                     /**< lpp enable */
+};
+ 
+struct  LppBufferCountParam {
+    uint32_t size;                   /** Size of the structure */
+    union OMX_VERSIONTYPE version;   /** Component version */
+    uint32_t bufferCount;            /**< lpp buffer count */
+};
+ 
+struct  LppBitDepthParam {
+    uint32_t size;                   /** Size of the structure */
+    union OMX_VERSIONTYPE version;   /** Component version */
+    uint32_t bitDepth;            /**< bit depth */
+};
+ 
 /**
  * @brief Defines the <b>CodecVideoPortFormatParam</b>.
  */
@@ -381,6 +405,14 @@ enum OmxIndexCodecExType {
     OMX_IndexParamBlockQP,
     /** ControlRateCRF */
     OMX_IndexParamControlRateCRF,
+    /** OMX_CONFIG_CHANNELID */
+    OMX_IndexParamChannelId,
+    /** OMX_CONFIG_LPPMODE */
+    OMX_IndexParamLppMode,
+    /** OMX_CONFIG_LPP_BUFFERCOUNT */
+    OMX_IndexParamLppBufferCount,
+    /** OMX_CONFIG_LPP_BITDEPTH */
+    OMX_IndexParamLppBitDepth,
     /** CodecEncGopMode */
     OMX_IndexParamEncBFrameMode,
 };
