@@ -383,6 +383,8 @@ enum OmxIndexCodecExType {
     OMX_IndexParamControlRateCRF,
     /** CodecEncGopMode */
     OMX_IndexParamEncBFrameMode,
+    /** OperatingRate */
+    OMX_IndexParamOperatingRate,
 };
  
 /**
