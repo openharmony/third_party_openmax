@@ -237,7 +237,7 @@ struct ControlRateConstantQuality {
 /**
  * @brief Defines the <b>ControlRateConstantQuality</b>.
  */
-struct ControlQualitytargetQp {
+struct ControlQualityTargetQp {
     uint32_t size;                                         /** Size of the structure */
     union OMX_VERSIONTYPE version;                         /** Component version */
     uint32_t portIndex;                                    /** Port index */
