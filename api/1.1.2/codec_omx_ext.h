@@ -397,10 +397,6 @@ enum OmxIndexCodecExType {
     OMX_IndexParamChannelId,
     /** OMX_CONFIG_LPPMODE */
     OMX_IndexParamLppMode,
-    /** OMX_CONFIG_LPP_BUFFERCOUNT */
-    OMX_IndexParamLppBufferCount,
-    /** OMX_CONFIG_LPP_BITDEPTH */
-    OMX_IndexParamLppBitDepth,
     /** CodecEncGopMode */
     OMX_IndexParamEncBFrameMode,
 };
