@@ -223,18 +223,6 @@ struct  GetLppModeParam {
     bool enable;                     /**< lpp enable */
 };
  
-struct  LppBufferCountParam {
-    uint32_t size;                   /** Size of the structure */
-    union OMX_VERSIONTYPE version;   /** Component version */
-    uint32_t bufferCount;            /**< lpp buffer count */
-};
- 
-struct  LppBitDepthParam {
-    uint32_t size;                   /** Size of the structure */
-    union OMX_VERSIONTYPE version;   /** Component version */
-    uint32_t bitDepth;            /**< bit depth */
-};
- 
 /**
  * @brief Defines the <b>CodecVideoPortFormatParam</b>.
  */
