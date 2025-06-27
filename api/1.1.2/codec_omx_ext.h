@@ -393,12 +393,12 @@ enum OmxIndexCodecExType {
     OMX_IndexParamBlockQP,
     /** ControlRateCRF */
     OMX_IndexParamControlRateCRF,
+    /** CodecEncGopMode */
+    OMX_IndexParamEncBFrameMode,
     /** OMX_CONFIG_CHANNELID */
     OMX_IndexParamChannelId,
     /** OMX_CONFIG_LPPMODE */
     OMX_IndexParamLppMode,
-    /** CodecEncGopMode */
-    OMX_IndexParamEncBFrameMode,
 };
  
 /**
