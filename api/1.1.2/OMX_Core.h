@@ -392,6 +392,10 @@ typedef struct OMX_PARAM_COMPONENTROLETYPE {
  */
 #define OMX_BUFFERFLAG_CODECCONFIG 0x00000080
 
+/* Multiple Frame Flag: This flag is set when the buffer content contains more than one frame data.
+ *  @ingroup buf
+ */
+#define OMX_BUFFERFLAG_MULTI_FRAME 0x00000100
 
 
 /** @ingroup buf */
