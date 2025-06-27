@@ -211,6 +211,18 @@ struct GetBufferHandleUsageParams {
     uint64_t usage;                /** Usage */
 };
  
+struct  GetChannelIdParam {
+    uint32_t size;                   /** Size of the structure */
+    union OMX_VERSIONTYPE version;   /** Component version */
+    uint32_t channelId;              /**< channel id */
+};
+ 
+struct  GetLppModeParam {
+    uint32_t size;                   /** Size of the structure */
+    union OMX_VERSIONTYPE version;   /** Component version */
+    bool enable;                     /**< lpp enable */
+};
+ 
 /**
  * @brief Defines the <b>CodecVideoPortFormatParam</b>.
  */
@@ -385,6 +397,10 @@ enum OmxIndexCodecExType {
     OMX_IndexParamEncBFrameMode,
     /** OperatingRate */
     OMX_IndexParamOperatingRate,
+    /** OMX_CONFIG_CHANNELID */
+    OMX_IndexParamChannelId,
+    /** OMX_CONFIG_LPPMODE */
+    OMX_IndexParamLppMode,
 };
  
 /**
