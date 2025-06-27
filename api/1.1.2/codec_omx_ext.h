@@ -249,7 +249,7 @@ struct ControlRateConstantQuality {
 /**
  * @brief Defines the <b>ControlRateConstantQuality</b>.
  */
-struct ControlQualitytargetQp {
+struct ControlQualityTargetQp {
     uint32_t size;                                         /** Size of the structure */
     union OMX_VERSIONTYPE version;                         /** Component version */
     uint32_t portIndex;                                    /** Port index */
@@ -395,6 +395,8 @@ enum OmxIndexCodecExType {
     OMX_IndexParamControlRateCRF,
     /** CodecEncGopMode */
     OMX_IndexParamEncBFrameMode,
+    /** OperatingRate */
+    OMX_IndexParamOperatingRate,
     /** OMX_CONFIG_CHANNELID */
     OMX_IndexParamChannelId,
     /** OMX_CONFIG_LPPMODE */
