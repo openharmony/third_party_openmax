@@ -401,6 +401,8 @@ enum OmxIndexCodecExType {
     OMX_IndexParamChannelId,
     /** OMX_CONFIG_LPPMODE */
     OMX_IndexParamLppMode,
+    /** InputStreamError */
+    OMX_IndexInputStreamError,
 };
  
 /**
