@@ -308,6 +308,15 @@ struct AudioCodecParam {
     uint32_t bitRate;              /** Bit Rate */
     uint32_t reserved;             /** reserved word */
 };
+
+/**
+ * @brief Defines the <b>LppTargetPtsParam</b>.
+ */
+struct LppTargetPtsParam {
+    uint32_t size;                  /** Size of the structure */
+    union OMX_VERSIONTYPE version;  /** Component version */
+    int64_t targetPts;              /** lpp target pts */
+};
  
 /**
  * @brief Enumerates the extended codec indexes.
@@ -403,6 +412,8 @@ enum OmxIndexCodecExType {
     OMX_IndexParamLppMode,
     /** InputStreamError */
     OMX_IndexInputStreamError,
+    /** OMX_CONFIG_LPP_TARGETPTS */
+    OMX_IndexParamLppTargetPts,
 };
  
 /**
