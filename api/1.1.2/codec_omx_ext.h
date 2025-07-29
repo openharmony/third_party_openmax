@@ -414,6 +414,8 @@ enum OmxIndexCodecExType {
     OMX_IndexInputStreamError,
     /** OMX_CONFIG_LPP_TARGETPTS */
     OMX_IndexParamLppTargetPts,
+    /** WirelessLowDelayVersion */
+    OMX_IndexParamWirelessVersion,
 };
  
 /**
