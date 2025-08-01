@@ -214,7 +214,7 @@ struct GetBufferHandleUsageParams {
 struct  GetChannelIdParam {
     uint32_t size;                   /** Size of the structure */
     union OMX_VERSIONTYPE version;   /** Component version */
-    uint32_t channelId;              /**< channel id */
+    int32_t channelId;               /**< channel id */
 };
  
 struct  GetLppModeParam {
