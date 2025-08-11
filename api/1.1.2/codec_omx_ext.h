@@ -414,8 +414,39 @@ enum OmxIndexCodecExType {
     OMX_IndexInputStreamError,
     /** OMX_CONFIG_LPP_TARGETPTS */
     OMX_IndexParamLppTargetPts,
-    /** WirelessLowDelayVersion */
-    OMX_IndexParamWirelessVersion,
+    /** RCDynamicParam */
+    OMX_IndexWirelessLowdelayRcDynamicParams,
+    /** RC Capped CRF Param */
+    OMX_IndexWirelessLowdelayRcCRFParams,
+};
+
+constexpr uint8_t MAX_HARDWARE_ADDR_LEN = 6;
+struct OmxVideoParamsWirelessLowdelay {
+    uint32_t nSize;
+    bool bSetMac;
+    bool bEnablePack;
+    bool bEnableOmxTest;
+    uint32_t sliceNum;
+    uint32_t layerNum;
+    uint8_t smac[MAX_HARDWARE_ADDR_LEN];
+    uint8_t dmac[MAX_HARDWARE_ADDR_LEN];
+};
+
+struct OmxVideoParamsWltDynamicParam {
+    uint32_t nSize;
+    uint32_t nPortIndex;
+    uint32_t maxQP;
+    uint32_t minQP;
+    uint32_t maxBitRate;
+    uint32_t minBitRate;
+    uint32_t rcFps;
+};
+
+struct OmxVideoParamsWltCrfParam {
+    uint32_t nSize;
+    uint32_t nPortIndex;
+    uint32_t complex;
+    bool isSceneCut;
 };
  
 /**
