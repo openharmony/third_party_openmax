@@ -26,6 +26,7 @@ extern "C" {
  
 #define PROCESS_NAME_LEN 50
 #define ROI_QUANTITY 6
+#define MAX_HARDWARE_ADDR_LEN 6
  
 /**
  * @brief Enumerates the extended AVC profile.
@@ -420,7 +421,6 @@ enum OmxIndexCodecExType {
     OMX_IndexWirelessLowdelayRcCRFParams,
 };
 
-constexpr uint8_t MAX_HARDWARE_ADDR_LEN = 6;
 struct OmxVideoParamsWirelessLowdelay {
     uint32_t nSize;
     bool bSetMac;
