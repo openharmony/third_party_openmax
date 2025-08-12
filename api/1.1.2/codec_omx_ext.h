@@ -450,10 +450,10 @@ struct OmxVideoParamsWltCrfParam {
     bool isSceneCut;
 };
 
-typedef enum OMX_EVENTTYPE_EXT {
+typedef enum OmxEventTypeExt {
     /** WirelessLowdelayDual420*/
     OMX_MotionStatusChanged = OMX_EventVendorStartUnused + 4,
-}OMX_EVENTTYPE_EXT;
+}OmxEventTypeExt;
  
 /**
  * @brief Enumerates the Other Control Rate Type.
