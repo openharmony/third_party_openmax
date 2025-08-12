@@ -17,6 +17,7 @@
 #define CODEC_OMX_EXT_H
 #include <OMX_IVCommon.h>
 #include <OMX_Video.h>
+#include <OMX_Core.h>
 #include <stdbool.h>
 #ifdef __cplusplus
 #if __cplusplus
@@ -448,6 +449,11 @@ struct OmxVideoParamsWltCrfParam {
     uint32_t complex;
     bool isSceneCut;
 };
+
+typedef enum OMX_EVENTTYPE_EXT {
+    /** WirelessLowdelayDual420*/
+    OMX_MotionStatusChanged = OMX_EventVendorStartUnused + 4,
+}OMX_EVENTTYPE_EXT;
  
 /**
  * @brief Enumerates the Other Control Rate Type.
