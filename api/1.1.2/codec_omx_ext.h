@@ -17,6 +17,7 @@
 #define CODEC_OMX_EXT_H
 #include <OMX_IVCommon.h>
 #include <OMX_Video.h>
+#include <OMX_Core.h>
 #include <stdbool.h>
 #ifdef __cplusplus
 #if __cplusplus
@@ -26,6 +27,7 @@ extern "C" {
  
 #define PROCESS_NAME_LEN 50
 #define ROI_QUANTITY 6
+#define MAX_HARDWARE_ADDR_LEN 6
  
 /**
  * @brief Enumerates the extended AVC profile.
@@ -414,9 +416,44 @@ enum OmxIndexCodecExType {
     OMX_IndexInputStreamError,
     /** OMX_CONFIG_LPP_TARGETPTS */
     OMX_IndexParamLppTargetPts,
-    /** WirelessLowDelayVersion */
-    OMX_IndexParamWirelessVersion,
+    /** RCDynamicParam */
+    OMX_IndexWirelessLowdelayRcDynamicParams,
+    /** RC Capped CRF Param */
+    OMX_IndexWirelessLowdelayRcCRFParams,
 };
+
+struct OmxVideoParamsWirelessLowdelay {
+    uint32_t nSize;
+    bool bSetMac;
+    bool bEnablePack;
+    bool bEnableOmxTest;
+    uint32_t sliceNum;
+    uint32_t layerNum;
+    uint8_t smac[MAX_HARDWARE_ADDR_LEN];
+    uint8_t dmac[MAX_HARDWARE_ADDR_LEN];
+};
+
+struct OmxVideoParamsWltDynamicParam {
+    uint32_t nSize;
+    uint32_t nPortIndex;
+    uint32_t maxQP;
+    uint32_t minQP;
+    uint32_t maxBitRate;
+    uint32_t minBitRate;
+    uint32_t rcFps;
+};
+
+struct OmxVideoParamsWltCrfParam {
+    uint32_t nSize;
+    uint32_t nPortIndex;
+    uint32_t complex;
+    bool isSceneCut;
+};
+
+typedef enum OmxEventTypeExt {
+    /** WirelessLowdelayDual420*/
+    OMX_MotionStatusChanged = OMX_EventVendorStartUnused + 4,
+}OmxEventTypeExt;
  
 /**
  * @brief Enumerates the Other Control Rate Type.
