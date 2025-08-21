@@ -164,6 +164,16 @@ enum CodecVvcLevel {
 enum CodecColorFormatExt {
     CODEC_COLOR_FORMAT_RGBA8888 = OMX_COLOR_FormatVendorStartUnused + 100,
 };
+
+/**
+ * @brief Enumerates the extended codec error type.
+ */
+enum CodecErrorTypeExt {
+    /** Param Sets Illegal */
+    OMX_ErrorParameterSetsIllegal = OMX_ErrorVendorStartUnused + 1,
+    /** Param Sets Lost */
+    OMX_ErrorParameterSetsLost,
+};
  
 /**
  * @brief Enumerates the buffer types.
