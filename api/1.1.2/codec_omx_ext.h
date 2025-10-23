@@ -439,6 +439,9 @@ struct OmxVideoParamsWirelessLowdelay {
     bool bEnableOmxTest;
     uint32_t sliceNum;
     uint32_t layerNum;
+    uint32_t maxDeliverFrmCnt;
+    uint32_t inputBufferCnt;
+    uint32_t outputBufferCnt;
     uint8_t smac[MAX_HARDWARE_ADDR_LEN];
     uint8_t dmac[MAX_HARDWARE_ADDR_LEN];
 };
