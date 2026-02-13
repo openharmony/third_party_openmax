@@ -430,6 +430,8 @@ enum OmxIndexCodecExType {
     OMX_IndexWirelessLowdelayRcDynamicParams,
     /** RC Capped CRF Param */
     OMX_IndexWirelessLowdelayRcCRFParams,
+    /** ControlCodecScenario */
+    OMX_IndexParamCodecScenario,
 };
 
 struct OmxVideoParamsWirelessLowdelay {
