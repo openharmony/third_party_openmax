@@ -482,6 +482,8 @@ typedef enum OmxVideoControlRateVendorExtType {
     OMX_Video_ControlRateConstantWithSQR,
     /** constant bit rate mode with CRF */
     OMX_Video_ControlRateConstantWithCRF,
+    /** stable bit rate mode with HQR */
+    OMX_Video_ControlRateConstantWithHQR
 } OmxVideoControlRateVendorExtType;
  
 /**
