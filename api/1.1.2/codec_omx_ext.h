@@ -432,6 +432,10 @@ enum OmxIndexCodecExType {
     OMX_IndexWirelessLowdelayRcCRFParams,
     /** ControlCodecScenario */
     OMX_IndexParamCodecScenario,
+    /** HDR MasteringDisplayColourVolumeS information */
+    OMX_IndexParamMasteringDisplayColourVolume,
+    /** HDR ContentLightLevel information */
+    OMX_IndexParamContentLightLevel,
 };
 
 struct OmxVideoParamsWirelessLowdelay {
@@ -642,6 +646,49 @@ struct CodecEncGopMode {
     uint32_t size;                        /** Size of the structure */
     union OMX_VERSIONTYPE version;        /** Component version */
     OMX_VIDEO_GOP_MODE gopMode;           /** encode gop mode */
+};
+
+struct ColorXY {
+    /** color X */
+    float x;
+    /** color Y */
+    float y;
+};
+ 
+struct OmxSmpte2086 {
+    /** primary red */
+    struct ColorXY displayPrimaryRed;
+    /** primary green */
+    struct ColorXY displayPrimaryGreen;
+    /** primary blue */
+    struct ColorXY displayPrimaryBlue;
+    /** white point */
+    struct ColorXY whitePoint;
+    /** max luminance */
+    float maxLuminance;
+    /** min luminance */
+    float minLuminance;
+};
+ 
+struct OmxCta861 {
+    /** max content lightLevel */
+    float maxContentLightLevel;
+    /** max frame average light level */
+    float maxFrameAverageLightLevel;
+};
+ 
+struct HdrColourVolumeFromContainer {
+    uint32_t size;                               /** Size of the structure */
+    union OMX_VERSIONTYPE version;               /** Component version */
+    uint32_t portIndex;                   /** Port index */
+    struct OmxSmpte2086 colourVolume;
+};
+ 
+struct HdrContentLightLevelFromContainer {
+    uint32_t size;                               /** Size of the structure */
+    union OMX_VERSIONTYPE version;               /** Component version */
+    uint32_t portIndex;                   /** Port index */
+    struct OmxCta861 contentLightLevel;
 };
 
 #ifdef __cplusplus
