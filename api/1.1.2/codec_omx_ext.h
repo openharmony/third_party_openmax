@@ -648,48 +648,48 @@ struct CodecEncGopMode {
     OMX_VIDEO_GOP_MODE gopMode;           /** encode gop mode */
 };
 
-typedef struct ColorXY {
+struct ColorXY {
     /** color X */
     float x;
     /** color Y */
     float y;
-} ColorXY;
+};
  
-typedef struct OmxSmpte2086 {
+struct OmxSmpte2086 {
     /** primary red */
-    ColorXY displayPrimaryRed;
+    struct ColorXY displayPrimaryRed;
     /** primary green */
-    ColorXY displayPrimaryGreen;
+    struct ColorXY displayPrimaryGreen;
     /** primary blue */
-    ColorXY displayPrimaryBlue;
+    struct ColorXY displayPrimaryBlue;
     /** white point */
-    ColorXY whitePoint;
+    struct ColorXY whitePoint;
     /** max luminance */
     float maxLuminance;
     /** min luminance */
     float minLuminance;
-} OmxSmpte2086;
+};
  
-typedef struct OmxCta861 {
+struct OmxCta861 {
     /** max content lightLevel */
     float maxContentLightLevel;
     /** max frame average light level */
     float maxFrameAverageLightLevel;
-} OmxCta861;
+};
  
-typedef struct HdrColourVolumeFromContainer {
+struct HdrColourVolumeFromContainer {
     uint32_t size;                               /** Size of the structure */
     union OMX_VERSIONTYPE version;               /** Component version */
     uint32_t portIndex;                   /** Port index */
-    OmxSmpte2086 colourVolume;
-} HdrColourVolumeFromContainer;
+    struct OmxSmpte2086 colourVolume;
+};
  
-typedef struct HdrContentLightLevelFromContainer {
+struct HdrContentLightLevelFromContainer {
     uint32_t size;                               /** Size of the structure */
     union OMX_VERSIONTYPE version;               /** Component version */
     uint32_t portIndex;                   /** Port index */
-    OmxCta861 contentLightLevel;
-} HdrContentLightLevelFromContainer;
+    struct OmxCta861 contentLightLevel;
+};
 
 #ifdef __cplusplus
 #if __cplusplus
