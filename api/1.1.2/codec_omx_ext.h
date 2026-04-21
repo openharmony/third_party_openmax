@@ -436,6 +436,8 @@ enum OmxIndexCodecExType {
     OMX_IndexParamMasteringDisplayColourVolume,
     /** HDR ContentLightLevel information */
     OMX_IndexParamContentLightLevel,
+    /** IdrAppendXps */
+    OMX_IndexParamIdrAppendXps,
 };
 
 struct OmxVideoParamsWirelessLowdelay {
