@@ -202,7 +202,15 @@ struct SupportBufferType {
     uint32_t portIndex;            /** Port index */
     uint32_t bufferTypes;          /** Supported buffer types */
 };
- 
+
+struct SupportBufferTypeV2 {
+    uint32_t size;                 /** Size of the structure */
+    union OMX_VERSIONTYPE version; /** Component version */
+    uint32_t portIndex;            /** Port index */
+    uint32_t supportedAllocBufTypes;  /** Supported alloc buffer types on OMX */
+    uint32_t supportedUseBufTypes;    /** Supported use buffer types on OMX*/
+};
+
 /**
  * @brief Define the <b>UseBuffer</b>.
  */
@@ -212,7 +220,17 @@ struct UseBufferType {
     uint32_t portIndex;            /** Port index */
     uint32_t bufferType;           /** Buffer type */
 };
- 
+
+/**
+ * @brief Define the <b>AllocBuffer Mode</b>.
+ */
+struct AllocBufferType {
+    uint32_t size;                 /** Size of the structure */
+    union OMX_VERSIONTYPE version; /** Component version */
+    uint32_t portIndex;            /** Port index */
+    uint32_t bufferType;           /** Buffer type */
+};
+
 /**
  * @brief Defines the <b>BufferHandleUsage</b>.
  */
@@ -432,6 +450,12 @@ enum OmxIndexCodecExType {
     OMX_IndexWirelessLowdelayRcCRFParams,
     /** ControlCodecScenario */
     OMX_IndexParamCodecScenario,
+    /** SupportBufferTypeV2 */
+    OMX_IndexParamSupportBufferTypeV2,
+    /** AllocBufferType */
+    OMX_IndexParamAllocBufferType,
+    /** GetBufferHandleUsageParams */
+    OMX_IndexParamConsumerUsage,
     /** HDR MasteringDisplayColourVolumeS information */
     OMX_IndexParamMasteringDisplayColourVolume,
     /** HDR ContentLightLevel information */
