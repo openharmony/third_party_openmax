@@ -450,16 +450,16 @@ enum OmxIndexCodecExType {
     OMX_IndexWirelessLowdelayRcCRFParams,
     /** ControlCodecScenario */
     OMX_IndexParamCodecScenario,
+    /** HDR MasteringDisplayColourVolumeS information */
+    OMX_IndexParamMasteringDisplayColourVolume,
+    /** HDR ContentLightLevel information */
+    OMX_IndexParamContentLightLevel,
     /** SupportBufferTypeV2 */
     OMX_IndexParamSupportBufferTypeV2,
     /** AllocBufferType */
     OMX_IndexParamAllocBufferType,
     /** GetBufferHandleUsageParams */
     OMX_IndexParamConsumerUsage,
-    /** HDR MasteringDisplayColourVolumeS information */
-    OMX_IndexParamMasteringDisplayColourVolume,
-    /** HDR ContentLightLevel information */
-    OMX_IndexParamContentLightLevel,
 };
 
 struct OmxVideoParamsWirelessLowdelay {
