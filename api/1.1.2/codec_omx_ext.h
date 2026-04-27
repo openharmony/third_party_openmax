@@ -460,6 +460,8 @@ enum OmxIndexCodecExType {
     OMX_IndexParamAllocBufferType,
     /** GetBufferHandleUsageParams */
     OMX_IndexParamConsumerUsage,
+    /** IdrAppendXps */
+    OMX_IndexParamIdrAppendXps,
 };
 
 struct OmxVideoParamsWirelessLowdelay {
