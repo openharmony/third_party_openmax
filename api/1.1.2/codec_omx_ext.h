@@ -462,6 +462,8 @@ enum OmxIndexCodecExType {
     OMX_IndexParamConsumerUsage,
     /** IdrAppendXps */
     OMX_IndexParamIdrAppendXps,
+    /** C2PA_SIGN_SIZE */
+    OMX_IndexParamC2paSignSize,
 };
 
 struct OmxVideoParamsWirelessLowdelay {
