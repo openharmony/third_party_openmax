@@ -297,6 +297,7 @@ struct StableControlRate {
     uint32_t sMaxBitrate;                                  /** Control max bitrate */
     uint32_t sTargetBitrate;                               /** Control bitrate */
     bool bitrateEnabled;                                   /** Control whether bitrate takes effect **/
+    bool isSqrFactorSet;                                   /** Control whether sqr factor is set **/
 };
  
 /**
